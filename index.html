@@ -3,148 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klave Co. | Estrutura digital para e-commerce</title>
+  <title>Klave Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <section id="inicio" class="panel hero reveal">
-      <header class="mini-head">
-        <div class="logo"><span class="mark">K</span><span>KLAVE CO.</span></div>
+  <main class="site">
+    <section id="inicio" class="panel reveal">
+      <header class="top">
+        <a href="#inicio" class="brand">
+          <svg class="brand-icon" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="12"/>
+          </svg>
+          <span>KLAVE CO.</span>
+        </a>
         <nav>
           <a href="#inicio">INÍCIO</a>
           <a href="#servicos">SERVIÇOS</a>
           <a href="#sobre">SOBRE</a>
           <a href="#contato">CONTATO</a>
         </nav>
-        <a class="btn ghost" href="#contato">FALE CONOSCO</a>
+        <a class="btn btn-ghost" href="#contato">FALE CONOSCO</a>
       </header>
-      <div class="hero-grid">
-        <div>
-          <p class="tag">AGÊNCIA DIGITAL</p>
+
+      <div class="hero">
+        <div class="copy">
+          <p class="kicker">AGÊNCIA DIGITAL</p>
           <h1>ESTRUTURA DIGITAL PARA NEGÓCIOS</h1>
-          <p class="sub">Criamos sites, sistemas e automações que estruturam negócios e geram resultados reais.</p>
-          <div class="row">
-            <a class="btn solid" href="#contato">QUERO ESTRUTURAR MEU NEGÓCIO</a>
-            <a class="btn ghost" href="#servicos">VER SERVIÇOS</a>
+          <p>Criamos sites, sistemas e automações que estruturam negócios e geram resultados reais.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#contato">QUERO ESTRUTURAR MEU NEGÓCIO</a>
+            <a class="btn btn-ghost" href="#servicos">VER SERVIÇOS</a>
           </div>
         </div>
-        <div class="symbol-wrap">
-          <div class="symbol">K</div>
+        <div class="hero-logo">
+          <svg class="hero-mark" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="9"/>
+          </svg>
         </div>
       </div>
-      <div class="brand-strip">
+
+      <div class="partners">
         <span>Empresas que confiam</span>
-        <div>
-          <b>VANGUARD</b><b>NEXUS</b><b>Elevare</b><b>FORMA</b><b>LUMEN</b>
-        </div>
+        <div><b>VANGUARD</b><b>NEXUS</b><b>Elevare</b><b>FORMA</b><b>LUMEN</b></div>
       </div>
     </section>
 
     <section id="servicos" class="panel reveal">
-      <header class="mini-head">
-        <div class="logo"><span class="mark">K</span><span>KLAVE CO.</span></div>
+      <header class="top">
+        <a href="#inicio" class="brand">
+          <svg class="brand-icon" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="12"/>
+          </svg>
+          <span>KLAVE CO.</span>
+        </a>
         <nav>
           <a href="#inicio">INÍCIO</a>
           <a href="#servicos" class="active">SERVIÇOS</a>
           <a href="#sobre">SOBRE</a>
           <a href="#contato">CONTATO</a>
         </nav>
-        <a class="btn ghost" href="#contato">FALE CONOSCO</a>
+        <a class="btn btn-ghost" href="#contato">FALE CONOSCO</a>
       </header>
-      <div class="services-grid">
+
+      <div class="services">
         <div class="left">
-          <p class="tag">SERVIÇOS</p>
+          <p class="kicker">SERVIÇOS</p>
           <h2>PLANOS QUE ESTRUTURAM E ESCALAM</h2>
-          <p class="sub">Escolha o plano ideal para a fase do seu negócio e tenha uma estrutura digital completa e profissional.</p>
+          <p>Escolha o plano ideal para a fase do seu negócio e tenha estrutura digital completa.</p>
         </div>
-        <div class="plans">
-          <article class="plan">
-            <h3>ESSENCIAL</h3><p class="price">R$ 3.500</p>
-            <ul><li>Site Institucional</li><li>Design Responsivo</li><li>Até 5 Páginas</li><li>Formulário de Contato</li><li>Integração com WhatsApp</li><li>Entrega em até 15 dias</li></ul>
-            <a class="btn solid" href="#contato">ESCOLHER PLANO</a>
+        <div class="cards">
+          <article class="card">
+            <h3>ESSENCIAL</h3>
+            <p class="price">R$ 3.500</p>
+            <ul><li>Site Institucional</li><li>Design Responsivo</li><li>Até 5 Páginas</li><li>Formulário</li><li>WhatsApp</li></ul>
+            <a class="btn btn-solid" href="#contato">ESCOLHER PLANO</a>
           </article>
-          <article class="plan best">
-            <span class="best-badge">MAIS ESCOLHIDO</span>
-            <h3>PROFISSIONAL</h3><p class="price">R$ 5.500</p>
-            <ul><li>Site Institucional</li><li>Landing Page</li><li>Até 10 Páginas</li><li>SEO Básico</li><li>Integração com WhatsApp</li><li>Relatório de Performance</li></ul>
-            <a class="btn solid" href="#contato">ESCOLHER PLANO</a>
+          <article class="card featured">
+            <span class="tag">MAIS ESCOLHIDO</span>
+            <h3>PROFISSIONAL</h3>
+            <p class="price">R$ 5.500</p>
+            <ul><li>Site Institucional</li><li>Landing Page</li><li>Até 10 Páginas</li><li>SEO Básico</li><li>Relatório</li></ul>
+            <a class="btn btn-solid" href="#contato">ESCOLHER PLANO</a>
           </article>
-          <article class="plan">
-            <h3>PREMIUM</h3><p class="price">R$ 7.500</p>
-            <ul><li>Site Institucional</li><li>Landing Pages Ilimitadas</li><li>Até 20 Páginas</li><li>SEO Avançado</li><li>Automações</li><li>Suporte Premium</li></ul>
-            <a class="btn solid" href="#contato">ESCOLHER PLANO</a>
+          <article class="card">
+            <h3>PREMIUM</h3>
+            <p class="price">R$ 7.500</p>
+            <ul><li>Site Institucional</li><li>Landing Ilimitada</li><li>Até 20 Páginas</li><li>SEO Avançado</li><li>Suporte</li></ul>
+            <a class="btn btn-solid" href="#contato">ESCOLHER PLANO</a>
           </article>
         </div>
       </div>
-      <div class="feature-bar">
+      <div class="bar">
         <div><strong>DESIGN ESTRATÉGICO</strong><span>Focado em conversão</span></div>
-        <div><strong>TECNOLOGIA</strong><span>Soluções modernas e rápidas</span></div>
+        <div><strong>TECNOLOGIA</strong><span>Soluções modernas</span></div>
         <div><strong>SUPORTE PREMIUM</strong><span>Acompanhamento próximo</span></div>
-        <div><strong>RESULTADOS REAIS</strong><span>Estrutura que gera crescimento</span></div>
+        <div><strong>RESULTADOS REAIS</strong><span>Estrutura que escala</span></div>
       </div>
     </section>
 
     <section id="sobre" class="panel reveal">
-      <header class="mini-head">
-        <div class="logo"><span class="mark">K</span><span>KLAVE CO.</span></div>
+      <header class="top">
+        <a href="#inicio" class="brand">
+          <svg class="brand-icon" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="12"/>
+          </svg>
+          <span>KLAVE CO.</span>
+        </a>
         <nav>
           <a href="#inicio">INÍCIO</a>
           <a href="#servicos">SERVIÇOS</a>
           <a href="#sobre" class="active">SOBRE</a>
           <a href="#contato">CONTATO</a>
         </nav>
-        <a class="btn ghost" href="#contato">FALE CONOSCO</a>
+        <a class="btn btn-ghost" href="#contato">FALE CONOSCO</a>
       </header>
-      <div class="about-grid">
-        <div>
-          <p class="tag">SOBRE NÓS</p>
+
+      <div class="about">
+        <div class="copy">
+          <p class="kicker">SOBRE NÓS</p>
           <h2>SOMOS ESTRUTURA. SOMOS RESULTADO.</h2>
-          <p class="sub">A Klave Co. nasceu para transformar ideias em negócios sólidos, através de tecnologia e estratégia.</p>
-          <p class="sub">Não somos apenas uma agência. Somos seu parceiro na construção de uma estrutura digital que gera autoridade, automatiza processos e impulsiona resultados.</p>
-          <div class="stats"><div><b>50+</b><span>PROJETOS ENTREGUES</span></div><div><b>30+</b><span>EMPRESAS ATENDIDAS</span></div><div><b>98%</b><span>SATISFAÇÃO DOS CLIENTES</span></div></div>
+          <p>A Klave Co. nasceu para transformar ideias em negócios sólidos por meio de tecnologia e estratégia.</p>
+          <p>Somos parceiros na construção de uma estrutura digital que gera autoridade, automatiza processos e impulsiona resultados.</p>
+          <div class="stats">
+            <div><b>50+</b><span>PROJETOS ENTREGUES</span></div>
+            <div><b>30+</b><span>EMPRESAS ATENDIDAS</span></div>
+            <div><b>98%</b><span>SATISFAÇÃO DOS CLIENTES</span></div>
+          </div>
         </div>
-        <div class="building"><span>K</span></div>
+        <div class="visual">
+          <div class="tower t1"></div>
+          <div class="tower t2"></div>
+          <svg class="floating-mark" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="10"/>
+          </svg>
+        </div>
       </div>
-      <footer class="about-foot">
-        <a class="btn solid" href="#contato">FALE COM NOSSA EQUIPE</a>
-        <div class="links"><h4>NAVEGAÇÃO</h4><a href="#inicio">Início</a><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#contato">Contato</a></div>
-        <div class="links"><h4>SERVIÇOS</h4><a href="#servicos">Sites Institucionais</a><a href="#servicos">Landing Pages</a><a href="#servicos">Sistemas</a><a href="#servicos">SEO</a></div>
-        <div class="links"><h4>LEGAL</h4><a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a></div>
-      </footer>
     </section>
 
     <section id="contato" class="panel reveal">
-      <header class="mini-head">
-        <div class="logo"><span class="mark">K</span><span>KLAVE CO.</span></div>
+      <header class="top">
+        <a href="#inicio" class="brand">
+          <svg class="brand-icon" viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M35 30 H105 V104 L150 60 L195 105 L150 150 H200 V190 H70 C50 190 35 174 35 154 Z" fill="none" stroke="currentColor" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="74" cy="150" r="18" fill="none" stroke="currentColor" stroke-width="12"/>
+          </svg>
+          <span>KLAVE CO.</span>
+        </a>
         <nav>
           <a href="#inicio">INÍCIO</a>
           <a href="#servicos">SERVIÇOS</a>
           <a href="#sobre">SOBRE</a>
           <a href="#contato" class="active">CONTATO</a>
         </nav>
-        <a class="btn ghost" href="#contato">FALE CONOSCO</a>
+        <a class="btn btn-ghost" href="#contato">FALE CONOSCO</a>
       </header>
-      <div class="contact-grid">
-        <div>
-          <p class="tag">CONTATO</p>
+
+      <div class="contact">
+        <div class="copy">
+          <p class="kicker">CONTATO</p>
           <h2>VAMOS ESTRUTURAR O PRÓXIMO NÍVEL DO SEU NEGÓCIO</h2>
-          <p class="sub">Preencha o formulário e nossa equipe entrará em contato em até 24 horas.</p>
-          <ul class="contact-list">
+          <p>Preencha o formulário e nossa equipe entrará em contato em até 24 horas.</p>
+          <ul>
             <li><strong>E-MAIL</strong><span>contato@klaveco.com</span></li>
             <li><strong>WHATSAPP</strong><span>(11) 99999-9999</span></li>
             <li><strong>LOCALIZAÇÃO</strong><span>São Paulo, SP</span></li>
           </ul>
         </div>
         <form class="contact-form">
-          <div class="row2"><input type="text" placeholder="Nome" required><input type="email" placeholder="E-mail" required></div>
+          <div class="two">
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="E-mail" required>
+          </div>
           <input type="text" placeholder="Empresa">
           <input type="tel" placeholder="WhatsApp" required>
           <textarea rows="6" placeholder="Como podemos te ajudar?" required></textarea>
-          <button class="btn solid submit" type="submit">ENVIAR MENSAGEM</button>
+          <button class="btn btn-solid" type="submit">ENVIAR MENSAGEM</button>
         </form>
       </div>
     </section>
