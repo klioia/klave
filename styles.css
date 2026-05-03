@@ -342,6 +342,8 @@ nav.scrolled {
 .about-section {
   padding: 140px 48px;
   display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .about-headline {
   font-size: clamp(36px, 4.5vw, 60px); font-weight: 900;
@@ -360,78 +362,44 @@ nav.scrolled {
 }
 
 .building-wrap {
-  display: flex; justify-content: center; align-items: center;
-  height: 420px; perspective: 900px; position: relative;
-}
-.cube-outer {
-  width: 220px; height: 220px;
-  transform-style: preserve-3d;
-  animation: cube-spin 18s linear infinite;
+  height: 500px;
   position: relative;
+  overflow: hidden;
+  background: linear-gradient(155deg, #111 0%, #090909 48%, #060606 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
-@keyframes cube-spin {
-  0%   { transform: rotateX(15deg) rotateY(0deg); }
-  100% { transform: rotateX(15deg) rotateY(360deg); }
-}
-.cube-face {
-  position: absolute; inset: 0;
-  border: 1px solid rgba(255,255,255,0.10);
-  background: rgba(255,255,255,0.012);
-}
-.face-front  { transform: translateZ(110px); }
-.face-back   { transform: translateZ(-110px) rotateY(180deg); }
-.face-left   { transform: rotateY(-90deg) translateZ(110px); }
-.face-right  { transform: rotateY(90deg) translateZ(110px); }
-.face-top    { transform: rotateX(90deg) translateZ(110px); }
-.face-bottom { transform: rotateX(-90deg) translateZ(110px); }
-
-.cube-inner {
+.arch {
   position: absolute;
-  width: 110px; height: 110px;
-  top: 50%; left: 50%;
-  transform-style: preserve-3d;
-  transform: translate(-50%,-50%);
-  animation: cube-inner-spin 12s linear infinite reverse;
+  bottom: -40px;
+  background: linear-gradient(180deg, #2b2b2b 0%, #0d0d0d 100%);
+  transform: skewX(-20deg);
+  box-shadow: inset -18px 0 24px rgba(0,0,0,.45);
 }
-@keyframes cube-inner-spin {
-  100% { transform: translate(-50%,-50%) rotateX(30deg) rotateY(360deg) rotateZ(15deg); }
-}
-.cube-face-inner {
-  position: absolute; inset: 0;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(255,255,255,0.025);
-}
-.face-front-i  { transform: translateZ(55px); }
-.face-back-i   { transform: translateZ(-55px) rotateY(180deg); }
-.face-left-i   { transform: rotateY(-90deg) translateZ(55px); }
-.face-right-i  { transform: rotateY(90deg) translateZ(55px); }
-.face-top-i    { transform: rotateX(90deg) translateZ(55px); }
-.face-bottom-i { transform: rotateX(-90deg) translateZ(55px); }
-
-.cube-edge {
+.scene-a { right: -10px; width: 240px; height: 520px; opacity: .85; }
+.scene-b { right: 150px; width: 200px; height: 470px; opacity: .65; }
+.scene-c { right: 285px; width: 160px; height: 420px; opacity: .45; }
+.scene-d { right: 390px; width: 130px; height: 360px; opacity: .3; }
+.building-logo {
   position: absolute;
-  width: 1px; background: rgba(255,255,255,0.06);
-  transform-origin: top center;
-}
-.edge-1 { height: 60px; top: 0; left: 50%; transform: translateZ(110px) rotateX(-45deg); }
-.edge-2 { height: 60px; top: 0; right: 0; transform: rotateY(90deg) translateZ(110px) rotateX(-45deg); }
-.edge-3 { height: 60px; bottom: 0; left: 50%; transform: translateZ(-110px) rotateX(45deg); }
-.edge-4 { height: 60px; bottom: 0; right: 0; transform: rotateY(-90deg) translateZ(-110px) rotateX(45deg); }
-
-.cube-logo-overlay {
-  position: absolute;
-  width: 100px; height: 100px;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
-  z-index: 10;
+  width: 170px;
+  height: 170px;
+  right: 125px;
+  bottom: 88px;
+  color: #fff;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,.65)) drop-shadow(0 0 24px rgba(255,255,255,.18));
 }
 
 .building-wrap::after {
   content: "";
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+  background:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px),
+    radial-gradient(ellipse at center, rgba(255,255,255,0.04) 0%, transparent 70%);
+  background-size: 64px 64px, 64px 64px, auto;
   pointer-events: none;
 }
 
