@@ -371,46 +371,51 @@ nav.scrolled {
   align-items: center;
   justify-content: center;
 }
-.arch-stack{
+.about-reference-visual{
   position:relative;
   width:410px;
   height:420px;
-  animation:stackFloat 9s ease-in-out infinite;
+  animation:fadeTower 1s ease-out both;
 }
-@keyframes stackFloat{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-8px)}
+@keyframes fadeTower{
+  from{opacity:0;transform:translateY(14px)}
+  to{opacity:1;transform:translateY(0)}
 }
-.arch-block{
+.tower-left,.tower-main,.tower-right{
   position:absolute;
-  bottom:-20px;
-  width:190px;
+  bottom:-14px;
+  background:linear-gradient(180deg,#2a2a2a 0%, #0d0d0d 72%);
   transform:skewX(-18deg);
-  background:linear-gradient(180deg,#2d2d2d 0%,#0f0f0f 72%);
+  box-shadow:inset -18px 0 30px rgba(0,0,0,.55);
+}
+.tower-main{
+  right:118px;
+  width:210px;
+  height:438px;
   border:1px solid rgba(255,255,255,.08);
-  box-shadow:inset -22px 0 32px rgba(0,0,0,.5);
 }
-.arch-block.back{right:20px;height:430px;opacity:.42}
-.arch-block.mid{right:128px;height:390px;opacity:.65}
-.arch-block.front{right:230px;height:340px;opacity:.92}
-.light-sweep{
-  position:absolute;
-  right:185px;
-  bottom:30px;
-  width:140px;
+.tower-left{
+  right:274px;
+  width:150px;
   height:320px;
-  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(255,255,255,.02) 65%,transparent);
-  transform:skewX(-18deg);
-  filter:blur(1px);
+  opacity:.55;
+  border:1px solid rgba(255,255,255,.06);
+}
+.tower-right{
+  right:16px;
+  width:160px;
+  height:390px;
+  opacity:.45;
+  border:1px solid rgba(255,255,255,.06);
 }
 .building-logo {
   position: absolute;
   width: 142px;
   height: 142px;
-  right: 122px;
-  bottom: 98px;
+  right: 140px;
+  bottom: 106px;
   color: #fff;
-  filter: drop-shadow(0 0 10px rgba(255,255,255,.75)) drop-shadow(0 0 34px rgba(255,255,255,.26));
+  filter: drop-shadow(0 0 10px rgba(255,255,255,.7)) drop-shadow(0 0 30px rgba(255,255,255,.24));
 }
 
 .building-wrap::after {
@@ -515,9 +520,11 @@ footer {
   .plans-section, .about-section, .contact-section { padding: 80px 24px; }
   .plans-grid { grid-template-columns: 1fr; }
   .about-section, .contact-section { grid-template-columns: 1fr; }
-  .arch-stack{width:320px;height:340px}
-  .arch-block{width:150px}
-  .building-logo{width:120px;height:120px;right:84px;bottom:84px}
+  .about-reference-visual{width:320px;height:340px}
+  .tower-main{width:170px;height:350px;right:90px}
+  .tower-left{width:120px;height:255px;right:220px}
+  .tower-right{width:125px;height:300px;right:8px}
+  .building-logo{width:120px;height:120px;right:102px;bottom:76px}
   .differentials { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
