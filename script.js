@@ -2,6 +2,9 @@ const cursor = document.querySelector(".cursor");
 const ring = document.querySelector(".cursor-ring");
 let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
 
+// Remove qualquer canvas residual antigo no hero
+document.querySelectorAll(".hero canvas").forEach((c) => c.remove());
+
 if (cursor && ring) {
   document.addEventListener("mousemove", (e) => {
     mouseX = e.clientX;
