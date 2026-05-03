@@ -365,31 +365,45 @@ nav.scrolled {
   height: 500px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(155deg, #111 0%, #090909 48%, #060606 100%);
+  background: radial-gradient(circle at 50% 20%, #171717 0%, #0b0b0b 40%, #060606 100%);
   border: 1px solid rgba(255,255,255,0.08);
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
-.arch {
-  position: absolute;
-  bottom: -40px;
-  background: linear-gradient(180deg, #2b2b2b 0%, #0d0d0d 100%);
-  transform: skewX(-20deg);
-  box-shadow: inset -18px 0 24px rgba(0,0,0,.45);
+.monolith{
+  width: 360px;height:360px;position:relative;
+  transform-style:preserve-3d;
+  animation:mono-float 7s ease-in-out infinite;
 }
-.scene-a { right: -10px; width: 240px; height: 520px; opacity: .85; }
-.scene-b { right: 150px; width: 200px; height: 470px; opacity: .65; }
-.scene-c { right: 285px; width: 160px; height: 420px; opacity: .45; }
-.scene-d { right: 390px; width: 130px; height: 360px; opacity: .3; }
+@keyframes mono-float{
+  0%,100%{transform:translateY(0) rotateY(-12deg) rotateX(8deg)}
+  50%{transform:translateY(-12px) rotateY(-6deg) rotateX(10deg)}
+}
+.mono-layer{
+  position:absolute;inset:0;
+  background:linear-gradient(160deg,#282828 0%,#0e0e0e 64%);
+  border:1px solid rgba(255,255,255,.08);
+  transform:skewY(-9deg);
+}
+.layer-1{transform:translate(52px,38px) skewY(-9deg);opacity:.35}
+.layer-2{transform:translate(24px,20px) skewY(-9deg);opacity:.58}
+.layer-3{transform:translate(0,0) skewY(-9deg);opacity:.9;box-shadow:inset -30px 0 40px rgba(0,0,0,.55)}
+.mono-ring{
+  position:absolute;border:1px solid rgba(255,255,255,.14);border-radius:999px;
+  left:50%;top:52%;transform:translate(-50%,-50%);
+}
+.ring-1{width:300px;height:300px;opacity:.28;animation:ring-spin 14s linear infinite}
+.ring-2{width:240px;height:240px;opacity:.2;animation:ring-spin 10s linear infinite reverse}
+@keyframes ring-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
 .building-logo {
   position: absolute;
-  width: 170px;
-  height: 170px;
-  right: 125px;
-  bottom: 88px;
+  width: 138px;
+  height: 138px;
+  right: 92px;
+  bottom: 108px;
   color: #fff;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,.65)) drop-shadow(0 0 24px rgba(255,255,255,.18));
+  filter: drop-shadow(0 0 8px rgba(255,255,255,.72)) drop-shadow(0 0 26px rgba(255,255,255,.2));
 }
 
 .building-wrap::after {
@@ -494,6 +508,8 @@ footer {
   .plans-section, .about-section, .contact-section { padding: 80px 24px; }
   .plans-grid { grid-template-columns: 1fr; }
   .about-section, .contact-section { grid-template-columns: 1fr; }
+  .monolith{width:300px;height:300px}
+  .building-logo{right:70px;bottom:86px}
   .differentials { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
