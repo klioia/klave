@@ -170,13 +170,13 @@ nav.scrolled {
 .hero-graphic { display: flex; justify-content: center; align-items: center; }
 .hero-svg {
   width: 100%; max-width: 440px;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.15))
+          drop-shadow(0 0 60px rgba(255,255,255,0.06));
   animation: float 5s ease-in-out infinite;
-  filter: drop-shadow(0 0 40px rgba(255,255,255,0.1));
 }
 @keyframes float {
-  0%,100% { transform: translateY(0px) rotate(0deg); }
-  33% { transform: translateY(-14px) rotate(0.5deg); }
-  66% { transform: translateY(-6px) rotate(-0.5deg); }
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
 }
 
 .logos-section {
@@ -231,15 +231,66 @@ nav.scrolled {
 }
 .plan-card:hover { background: #060606; }
 .plan-card.featured {
-  border: 1px solid rgba(255,255,255,0.75);
-  box-shadow: 0 0 60px rgba(255,255,255,0.06), inset 0 0 60px rgba(255,255,255,0.01);
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.7);
+  background: #050505;
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.15),
+    0 0 20px rgba(255,255,255,0.08),
+    0 0 40px rgba(255,255,255,0.05),
+    0 0 80px rgba(255,255,255,0.03),
+    inset 0 0 30px rgba(255,255,255,0.02);
 }
 .plan-card.featured::before {
-  content: "MAIS ESCOLHIDO";
-  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    rgba(255,255,255,0.06) 0%,
+    rgba(255,255,255,0.02) 40%,
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+.plan-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.6) 30%,
+    rgba(255,255,255,0.9) 50%,
+    rgba(255,255,255,0.6) 70%,
+    transparent 100%
+  );
+  animation: shimmer-top 3s ease-in-out infinite;
+}
+@keyframes shimmer-top {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+.plan-card.featured .plan-badge {
+  position: absolute; top: -1px; left: 50%;
+  transform: translateX(-50%);
   background: white; color: black;
   font-size: 10px; font-weight: 800; letter-spacing: 2.5px;
   padding: 6px 18px; white-space: nowrap;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4), 0 0 40px rgba(255,255,255,0.2);
+}
+.plan-card.featured:hover {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.85),
+    0 0 30px rgba(255,255,255,0.12),
+    0 0 60px rgba(255,255,255,0.08),
+    0 0 100px rgba(255,255,255,0.04),
+    inset 0 0 40px rgba(255,255,255,0.03);
+  transition: box-shadow 0.4s ease;
 }
 
 .plan-name {
@@ -308,50 +359,81 @@ nav.scrolled {
   text-transform: uppercase; margin-top: 6px;
 }
 
-.geo-wrap {
+.building-wrap {
   display: flex; justify-content: center; align-items: center;
-  height: 400px; perspective: 800px;
+  height: 420px; perspective: 900px; position: relative;
 }
-.geo-cube {
-  width: 200px; height: 200px; position: relative;
+.cube-outer {
+  width: 220px; height: 220px;
   transform-style: preserve-3d;
-  animation: cube-rotate 16s linear infinite;
+  animation: cube-spin 18s linear infinite;
+  position: relative;
 }
-@keyframes cube-rotate {
-  0% { transform: rotateX(20deg) rotateY(0deg); }
-  100% { transform: rotateX(20deg) rotateY(360deg); }
+@keyframes cube-spin {
+  0%   { transform: rotateX(15deg) rotateY(0deg); }
+  100% { transform: rotateX(15deg) rotateY(360deg); }
 }
-.geo-face {
+.cube-face {
   position: absolute; inset: 0;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: rgba(255,255,255,0.015);
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.012);
 }
-.geo-face-front  { transform: translateZ(100px); }
-.geo-face-back   { transform: translateZ(-100px) rotateY(180deg); }
-.geo-face-left   { transform: rotateY(-90deg) translateZ(100px); }
-.geo-face-right  { transform: rotateY(90deg) translateZ(100px); }
-.geo-face-top    { transform: rotateX(90deg) translateZ(100px); }
-.geo-face-bottom { transform: rotateX(-90deg) translateZ(100px); }
-.geo-cube-inner {
-  width: 120px; height: 120px; position: absolute;
-  top: 50%; left: 50%; transform-style: preserve-3d;
-  transform: translate(-50%,-50%) rotateX(45deg) rotateZ(45deg);
-  animation: cube-rotate-inner 10s linear infinite reverse;
+.face-front  { transform: translateZ(110px); }
+.face-back   { transform: translateZ(-110px) rotateY(180deg); }
+.face-left   { transform: rotateY(-90deg) translateZ(110px); }
+.face-right  { transform: rotateY(90deg) translateZ(110px); }
+.face-top    { transform: rotateX(90deg) translateZ(110px); }
+.face-bottom { transform: rotateX(-90deg) translateZ(110px); }
+
+.cube-inner {
+  position: absolute;
+  width: 110px; height: 110px;
+  top: 50%; left: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50%,-50%);
+  animation: cube-inner-spin 12s linear infinite reverse;
 }
-@keyframes cube-rotate-inner {
-  100% { transform: translate(-50%,-50%) rotateX(45deg) rotateY(360deg) rotateZ(45deg); }
+@keyframes cube-inner-spin {
+  100% { transform: translate(-50%,-50%) rotateX(30deg) rotateY(360deg) rotateZ(15deg); }
 }
-.geo-inner-face {
+.cube-face-inner {
   position: absolute; inset: 0;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(255,255,255,0.025);
 }
-.geo-inner-face-front  { transform: translateZ(60px); }
-.geo-inner-face-back   { transform: translateZ(-60px) rotateY(180deg); }
-.geo-inner-face-left   { transform: rotateY(-90deg) translateZ(60px); }
-.geo-inner-face-right  { transform: rotateY(90deg) translateZ(60px); }
-.geo-inner-face-top    { transform: rotateX(90deg) translateZ(60px); }
-.geo-inner-face-bottom { transform: rotateX(-90deg) translateZ(60px); }
+.face-front-i  { transform: translateZ(55px); }
+.face-back-i   { transform: translateZ(-55px) rotateY(180deg); }
+.face-left-i   { transform: rotateY(-90deg) translateZ(55px); }
+.face-right-i  { transform: rotateY(90deg) translateZ(55px); }
+.face-top-i    { transform: rotateX(90deg) translateZ(55px); }
+.face-bottom-i { transform: rotateX(-90deg) translateZ(55px); }
+
+.cube-edge {
+  position: absolute;
+  width: 1px; background: rgba(255,255,255,0.06);
+  transform-origin: top center;
+}
+.edge-1 { height: 60px; top: 0; left: 50%; transform: translateZ(110px) rotateX(-45deg); }
+.edge-2 { height: 60px; top: 0; right: 0; transform: rotateY(90deg) translateZ(110px) rotateX(-45deg); }
+.edge-3 { height: 60px; bottom: 0; left: 50%; transform: translateZ(-110px) rotateX(45deg); }
+.edge-4 { height: 60px; bottom: 0; right: 0; transform: rotateY(-90deg) translateZ(-110px) rotateX(45deg); }
+
+.cube-logo-overlay {
+  position: absolute;
+  width: 100px; height: 100px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
+  z-index: 10;
+}
+
+.building-wrap::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
 
 .contact-section {
   padding: 140px 48px;
