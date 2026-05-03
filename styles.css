@@ -365,93 +365,79 @@ nav.scrolled {
   height: 500px;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 50% 20%, #171717 0%, #0b0b0b 40%, #060606 100%);
+  background: radial-gradient(circle at 55% 14%, #191919 0%, #0a0a0a 46%, #050505 100%);
   border: 1px solid rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.monolith{
-  width: 360px;height:360px;position:relative;
+.prism-stage{
+  position:relative;
+  width:380px;
+  height:380px;
+  perspective:1000px;
   transform-style:preserve-3d;
-  animation:mono-float 7s ease-in-out infinite;
-  z-index: 3;
+  animation:prismFloat 8s ease-in-out infinite;
 }
-@keyframes mono-float{
-  0%,100%{transform:translateY(0) rotateY(-12deg) rotateX(8deg)}
-  50%{transform:translateY(-12px) rotateY(-6deg) rotateX(10deg)}
+@keyframes prismFloat{
+  0%,100%{transform:translateY(0) rotateY(-8deg)}
+  50%{transform:translateY(-10px) rotateY(-2deg)}
 }
-.mono-layer{
-  position:absolute;inset:0;
-  background:linear-gradient(160deg,#282828 0%,#0e0e0e 64%);
-  border:1px solid rgba(255,255,255,.08);
-  transform:skewY(-9deg);
+.prism{
+  position:absolute;
+  bottom:20px;
+  width:190px;
+  height:300px;
+  left:50%;
+  transform-origin:bottom center;
+  clip-path:polygon(18% 0%, 100% 0%, 82% 100%, 0% 100%);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:inset -20px 0 24px rgba(0,0,0,.4);
 }
-.layer-1{transform:translate(52px,38px) skewY(-9deg);opacity:.35}
-.layer-2{transform:translate(24px,20px) skewY(-9deg);opacity:.58}
-.layer-3{transform:translate(0,0) skewY(-9deg);opacity:.9;box-shadow:inset -30px 0 40px rgba(0,0,0,.55)}
-.mono-ring{
-  position:absolute;border:1px solid rgba(255,255,255,.14);border-radius:999px;
-  left:50%;top:52%;transform:translate(-50%,-50%);
+.p-back{
+  transform:translateX(-50%) translateZ(-80px) rotateY(-18deg);
+  background:linear-gradient(160deg,#2b2b2b 0%, #0f0f0f 70%);
+  opacity:.34;
 }
-.ring-1{width:300px;height:300px;opacity:.28;animation:ring-spin 14s linear infinite}
-.ring-2{width:240px;height:240px;opacity:.2;animation:ring-spin 10s linear infinite reverse}
-@keyframes ring-spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+.p-mid{
+  transform:translateX(-50%) translateZ(-35px) rotateY(-11deg);
+  background:linear-gradient(160deg,#343434 0%, #121212 70%);
+  opacity:.58;
+}
+.p-front{
+  transform:translateX(-50%) translateZ(0) rotateY(-5deg);
+  background:linear-gradient(160deg,#3b3b3b 0%, #151515 75%);
+  opacity:.9;
+}
+.prism-grid{
+  position:absolute;inset:40px 54px 44px 54px;
+  background:
+    linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size:34px 34px;
+  opacity:.25;
+  transform:skewY(-8deg);
+}
+.light-column{
+  position:absolute;
+  left:50%;
+  top:24px;
+  transform:translateX(-50%);
+  width:120px;
+  height:318px;
+  background:linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.02) 70%, transparent);
+  filter:blur(2px);
+  clip-path:polygon(50% 0%, 100% 100%, 0% 100%);
+  opacity:.75;
+}
 .building-logo {
   position: absolute;
-  width: 138px;
-  height: 138px;
-  right: 92px;
-  bottom: 108px;
+  width: 136px;
+  height: 136px;
+  right: 86px;
+  bottom: 116px;
   color: #fff;
-  filter: drop-shadow(0 0 8px rgba(255,255,255,.72)) drop-shadow(0 0 26px rgba(255,255,255,.2));
-}
-.holo-beam{
-  position:absolute;
-  width:220px;
-  height:460px;
-  left:50%;
-  top:48%;
-  transform:translate(-50%,-50%);
-  background:linear-gradient(
-    180deg,
-    rgba(255,255,255,0.12) 0%,
-    rgba(255,255,255,0.04) 28%,
-    rgba(255,255,255,0.01) 60%,
-    transparent 100%
-  );
-  filter: blur(2px);
-  clip-path: polygon(50% 0%, 72% 100%, 28% 100%);
-  animation:beamPulse 4.6s ease-in-out infinite;
-  pointer-events:none;
-  z-index:2;
-}
-@keyframes beamPulse{
-  0%,100%{opacity:.35}
-  50%{opacity:.62}
-}
-.orbit-particles{
-  position:absolute;inset:0;pointer-events:none;z-index:4;
-}
-.orbit-particles span{
-  position:absolute;
-  width:5px;height:5px;border-radius:50%;
-  background:rgba(255,255,255,.82);
-  box-shadow:0 0 10px rgba(255,255,255,.55);
-  animation:orbitFloat 7s linear infinite;
-}
-.orbit-particles span:nth-child(1){left:26%;top:28%;animation-delay:0s}
-.orbit-particles span:nth-child(2){left:68%;top:24%;animation-delay:-1.1s}
-.orbit-particles span:nth-child(3){left:74%;top:54%;animation-delay:-2.2s}
-.orbit-particles span:nth-child(4){left:58%;top:76%;animation-delay:-3.3s}
-.orbit-particles span:nth-child(5){left:34%;top:70%;animation-delay:-4.4s}
-.orbit-particles span:nth-child(6){left:22%;top:48%;animation-delay:-5.5s}
-@keyframes orbitFloat{
-  0%{transform:translate(0,0) scale(1);opacity:.4}
-  25%{transform:translate(6px,-10px) scale(1.1);opacity:.9}
-  50%{transform:translate(0,-16px) scale(.9);opacity:.45}
-  75%{transform:translate(-6px,-8px) scale(1.05);opacity:.85}
-  100%{transform:translate(0,0) scale(1);opacity:.4}
+  filter: drop-shadow(0 0 10px rgba(255,255,255,.75)) drop-shadow(0 0 28px rgba(255,255,255,.22));
 }
 
 .building-wrap::after {
@@ -556,11 +542,41 @@ footer {
   .plans-section, .about-section, .contact-section { padding: 80px 24px; }
   .plans-grid { grid-template-columns: 1fr; }
   .about-section, .contact-section { grid-template-columns: 1fr; }
-  .monolith{width:300px;height:300px}
-  .building-logo{right:70px;bottom:86px}
+  .prism-stage{width:300px;height:320px}
+  .building-logo{right:52px;bottom:98px}
   .differentials { grid-template-columns: repeat(2,1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .form-row { grid-template-columns: 1fr; }
   .logos-track { margin-left: 0; }
   .logos-label { display: none; }
+}
+
+.wa-fab{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:1200;
+  padding:14px 18px;
+  background:#fff;
+  color:#000;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:1.2px;
+  border:1px solid #fff;
+  text-transform:uppercase;
+  box-shadow:0 0 24px rgba(255,255,255,.2);
+  transition:.2s ease;
+}
+.wa-fab:hover{
+  background:#eaeaea;
+  transform:translateY(-2px);
+}
+@media (max-width:768px){
+  .wa-fab{
+    right:14px;
+    bottom:14px;
+    padding:12px 14px;
+    font-size:11px;
+  }
 }
