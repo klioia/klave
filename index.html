@@ -210,14 +210,18 @@
         <li><svg class="contact-info-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="white" stroke-width="1.5"/></svg><div><p class="contact-info-label">LOCALIZAÇÃO</p><p class="contact-info-value">Espírito Santo</p></div></li>
       </ul>
     </div>
-    <form class="contact-form reveal-right">
+    <form class="contact-form reveal-right" action="https://formsubmit.co/robsondavi508@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Novo lead - Klave Co.">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_next" value="https://klaveco.online/#contato">
       <div class="form-row">
-        <input class="form-input reveal d1" type="text" placeholder="Nome" required>
-        <input class="form-input reveal d1" type="email" placeholder="E-mail" required>
+        <input class="form-input reveal d1" type="text" name="nome" placeholder="Nome" required>
+        <input class="form-input reveal d1" type="email" name="email" placeholder="E-mail" required>
       </div>
-      <input class="form-input reveal d2" type="text" placeholder="Empresa">
-      <input class="form-input reveal d2" type="tel" placeholder="WhatsApp" required>
-      <textarea class="form-textarea reveal d3" placeholder="Como podemos te ajudar?" required></textarea>
+      <input class="form-input reveal d2" type="text" name="empresa" placeholder="Empresa">
+      <input class="form-input reveal d2" type="tel" name="whatsapp" placeholder="WhatsApp" required>
+      <textarea class="form-textarea reveal d3" name="mensagem" placeholder="Como podemos te ajudar?" required></textarea>
       <button class="form-submit" type="submit">ENVIAR MENSAGEM →</button>
     </form>
   </section>

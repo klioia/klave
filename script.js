@@ -88,17 +88,10 @@ window.addEventListener("scroll", () => {
 
 const form = document.querySelector(".contact-form");
 if (form) {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  form.addEventListener("submit", () => {
     const btn = form.querySelector(".form-submit");
     if (!btn) return;
-    const original = btn.textContent;
     btn.textContent = "ENVIANDO...";
     btn.disabled = true;
-    setTimeout(() => {
-      form.reset();
-      btn.textContent = original;
-      btn.disabled = false;
-    }, 1500);
   });
 }
