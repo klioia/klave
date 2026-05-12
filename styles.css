@@ -324,10 +324,9 @@ nav.scrolled {
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .plan-btn:hover { background: white; color: black; border-color: white; }
-.plan-actions{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
+.plan-btn-single{
+  width:100%;
+  margin-top:6px;
 }
 .plan-card.featured .plan-btn {
   background: white; color: black; border-color: white;
@@ -528,7 +527,6 @@ footer {
   .hero-headline { font-size: 52px; letter-spacing: -2px; }
   .plans-section, .about-section, .contact-section { padding: 80px 24px; }
   .plans-grid { grid-template-columns: 1fr; }
-  .plan-actions{grid-template-columns:1fr;}
   .about-section, .contact-section { grid-template-columns: 1fr; }
   .about-reference-visual{width:320px;height:340px}
   .tower-main{width:170px;height:350px;right:90px}
