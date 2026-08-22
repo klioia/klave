@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klave Co.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-ring"></div>
+
+  <nav>
+    <a class="nav-logo" href="#inicio">
+      <svg viewBox="0 0 220 220" aria-hidden="true">
+        <path d="M48 34 H112 V112 L156 68 Q162 62 168 68 L198 98 Q204 104 198 110 L158 150 H204 Q212 150 212 158 V188 Q212 196 204 196 H76 Q48 196 48 168 Z" fill="none" stroke="currentColor" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="84" cy="160" r="16" fill="none" stroke="currentColor" stroke-width="11"/>
+      </svg>
+      <span>KLAVE CO.</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio" class="active">INÍCIO</a></li>
+      <li><a href="#servicos">SERVIÇOS</a></li>
+      <li><a href="#sobre">SOBRE</a></li>
+      <li><a href="#contato">CONTATO</a></li>
+    </ul>
+    <a class="nav-cta" href="diagnostico.html">FALE CONOSCO</a>
+  </nav>
+
+  <section class="hero" id="inicio">
+    <div class="hero-noise"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-left reveal-left">
+        <div class="hero-label">
+          <span class="label-line"></span>
+          AGÊNCIA DIGITAL
+        </div>
+        <h1 class="hero-headline reveal d1">ESTRUTURA<br>DIGITAL PARA<br>NEGÓCIOS</h1>
+        <p class="hero-sub">Criamos sites, sistemas e automações que estruturam negócios e geram resultados reais.</p>
+        <div class="hero-btns reveal d2">
+          <a href="diagnostico.html" class="btn-primary">QUERO ESTRUTURAR MEU NEGÓCIO →</a>
+          <a href="#servicos" class="btn-outline">VER SERVIÇOS</a>
+        </div>
+      </div>
+      <div class="hero-graphic reveal-right">
+        <svg class="hero-svg" viewBox="0 0 360 400" aria-hidden="true">
+          <defs>
+            <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur1"/>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur2"/>
+              <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur3"/>
+              <feMerge>
+                <feMergeNode in="blur3"/>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="blur1"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+            <filter id="glow-soft" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+              <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <g filter="url(#glow-strong)" opacity="0.35">
+            <path d="M88 56 H186 V176 L252 110 Q261 101 270 110 L310 150 Q319 159 310 168 L252 226 H318 Q330 226 330 238 V284 Q330 296 318 296 H132 Q88 296 88 252 Z" fill="none" stroke="white" stroke-width="10" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="142" cy="246" r="22" fill="none" stroke="white" stroke-width="10"/>
+          </g>
+          <g filter="url(#glow-soft)" opacity="0.72">
+            <path d="M88 56 H186 V176 L252 110 Q261 101 270 110 L310 150 Q319 159 310 168 L252 226 H318 Q330 226 330 238 V284 Q330 296 318 296 H132 Q88 296 88 252 Z" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="142" cy="246" r="22" fill="none" stroke="white" stroke-width="4"/>
+          </g>
+          <g opacity="1">
+            <path d="M88 56 H186 V176 L252 110 Q261 101 270 110 L310 150 Q319 159 310 168 L252 226 H318 Q330 226 330 238 V284 Q330 296 318 296 H132 Q88 296 88 252 Z" fill="none" stroke="white" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="142" cy="246" r="22" fill="none" stroke="white" stroke-width="1.7"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos-section">
+    <div class="logos-label">Empresas que confiam</div>
+    <div class="logos-track">
+      <div class="logos-inner">
+        <span>VANGUARD</span>
+        <span>NEXUS</span>
+        <span>Elevare</span>
+        <span>FORMA</span>
+        <span>LUMEN</span>
+        <span>VANGUARD</span>
+        <span>NEXUS</span>
+        <span>Elevare</span>
+        <span>FORMA</span>
+        <span>LUMEN</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans-section reveal" id="servicos">
+    <p class="plans-label">SERVIÇOS</p>
+    <h2 class="plans-headline">PLANOS QUE ESTRUTURAM E ESCALAM</h2>
+    <p class="plans-sub">Escolha o plano ideal para a fase do seu negócio e tenha uma estrutura digital completa e profissional.</p>
+
+    <div class="plans-grid custom-only">
+      <article class="plan-card featured reveal d2">
+        <h3 class="plan-name">PLANO PERSONALIZADO</h3>
+        <p class="plan-price">SOB CONSULTA</p>
+        <ul class="plan-features">
+          <li>Estrutura feita para o momento do seu negócio</li>
+          <li>Escopo sob medida para metas reais</li>
+          <li>Tecnologia, design e automações conforme necessidade</li>
+          <li>Atendimento direto com nossa equipe</li>
+        </ul>
+        <a class="plan-btn plan-btn-single" href="https://wa.me/5527998417420?text=Ol%C3%A1%2C+quero+montar+um+plano+personalizado+na+Klave+Co." target="_blank" rel="noopener noreferrer">MONTAR PLANO PERSONALIZADO</a>
+      </article>
+    </div>
+
+    <div class="differentials">
+      <div class="diff-item">
+        <svg class="diff-icon" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none" stroke="white" stroke-width="1.5"/></svg>
+        <div><p class="diff-name">DESIGN ESTRATÉGICO</p><p class="diff-sub">Focado em conversão</p></div>
+      </div>
+      <div class="diff-item">
+        <svg class="diff-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="white" stroke-width="1.5"/></svg>
+        <div><p class="diff-name">TECNOLOGIA</p><p class="diff-sub">Soluções modernas e rápidas</p></div>
+      </div>
+      <div class="diff-item">
+        <svg class="diff-icon" viewBox="0 0 24 24"><path d="M4 12h16M12 4v16" fill="none" stroke="white" stroke-width="1.5"/></svg>
+        <div><p class="diff-name">SUPORTE PREMIUM</p><p class="diff-sub">Acompanhamento próximo</p></div>
+      </div>
+      <div class="diff-item">
+        <svg class="diff-icon" viewBox="0 0 24 24"><path d="M4 18l6-6 4 4 6-8" fill="none" stroke="white" stroke-width="1.5"/></svg>
+        <div><p class="diff-name">RESULTADOS REAIS</p><p class="diff-sub">Estrutura que gera crescimento</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="sobre">
+    <div class="about-left reveal-left">
+      <p class="plans-label">SOBRE NÓS</p>
+      <h2 class="about-headline">SOMOS ESTRUTURA. SOMOS RESULTADO.</h2>
+      <p class="about-text">A Klave Co. nasceu para transformar ideias em negócios sólidos, através de tecnologia e estratégia.</p>
+      <p class="about-text">Não somos apenas uma agência. Somos seu parceiro na construção de uma estrutura digital que gera autoridade, automatiza processos e impulsiona resultados.</p>
+      <div class="metrics">
+        <div class="metric"><div class="metric-value" id="m1">0+</div><div class="metric-label">PROJETOS ENTREGUES</div></div>
+        <div class="metric"><div class="metric-value" id="m2">0+</div><div class="metric-label">EMPRESAS ATENDIDAS</div></div>
+        <div class="metric"><div class="metric-value" id="m3">0%</div><div class="metric-label">SATISFAÇÃO DOS CLIENTES</div></div>
+      </div>
+      <a href="diagnostico.html" class="btn-outline">FALE COM NOSSA EQUIPE →</a>
+    </div>
+    <div class="building-wrap reveal-right">
+      <div class="about-reference-visual">
+        <div class="tower-left"></div>
+        <div class="tower-main"></div>
+        <div class="tower-right"></div>
+        <svg class="building-logo" viewBox="0 0 220 220" aria-hidden="true">
+          <path d="M48 34 H112 V112 L156 68 Q162 62 168 68 L198 98 Q204 104 198 110 L158 150 H204 Q212 150 212 158 V188 Q212 196 204 196 H76 Q48 196 48 168 Z" fill="none" stroke="white" stroke-width="9" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="84" cy="160" r="16" fill="none" stroke="white" stroke-width="9"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contato">
+    <div class="reveal-left">
+      <p class="plans-label">CONTATO</p>
+      <h2 class="contact-headline">VAMOS ESTRUTURAR O PRÓXIMO NÍVEL DO SEU NEGÓCIO</h2>
+      <p class="contact-sub">Preencha o formulário e nossa equipe entrará em contato em até 24 horas.</p>
+      <ul class="contact-info">
+        <li><svg class="contact-info-icon" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="white" stroke-width="1.5"/></svg><div><p class="contact-info-label">E-MAIL</p><p class="contact-info-value">contato@klaveco.com</p></div></li>
+        <li><svg class="contact-info-icon" viewBox="0 0 24 24"><path d="M5 4h14v16H5z" fill="none" stroke="white" stroke-width="1.5"/></svg><div><p class="contact-info-label">WHATSAPP</p><p class="contact-info-value">(27) 99841-7420</p></div></li>
+        <li><svg class="contact-info-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="white" stroke-width="1.5"/></svg><div><p class="contact-info-label">LOCALIZAÇÃO</p><p class="contact-info-value">Espírito Santo</p></div></li>
+      </ul>
+    </div>
+    <form class="contact-form reveal-right" action="https://formsubmit.co/robsondavi508@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Novo lead - Klave Co.">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_cc" value="klavecompany@gmail.com">
+      <input type="hidden" name="_next" value="https://klaveco.online/#contato">
+      <div class="form-row">
+        <input class="form-input reveal d1" type="text" name="nome" placeholder="Nome" required>
+        <input class="form-input reveal d1" type="email" name="email" placeholder="E-mail" required>
+      </div>
+      <input class="form-input reveal d2" type="text" name="empresa" placeholder="Empresa">
+      <input class="form-input reveal d2" type="tel" name="whatsapp" placeholder="WhatsApp" required>
+      <textarea class="form-textarea reveal d3" name="mensagem" placeholder="Como podemos te ajudar?" required></textarea>
+      <button class="form-submit" type="submit">ENVIAR MENSAGEM →</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <a class="nav-logo" href="#inicio">
+          <svg viewBox="0 0 220 220" aria-hidden="true">
+            <path d="M48 34 H112 V112 L156 68 Q162 62 168 68 L198 98 Q204 104 198 110 L158 150 H204 Q212 150 212 158 V188 Q212 196 204 196 H76 Q48 196 48 168 Z" fill="none" stroke="currentColor" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+            <circle cx="84" cy="160" r="16" fill="none" stroke="currentColor" stroke-width="11"/>
+          </svg>
+          <span>KLAVE CO.</span>
+        </a>
+        <p class="footer-brand-tagline">Estrutura digital para negócios que querem crescer com consistência.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">◯</a>
+          <a href="#" aria-label="LinkedIn">◯</a>
+          <a href="#" aria-label="WhatsApp">◯</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">NAVEGAÇÃO</h4>
+        <ul class="footer-col-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">SERVIÇOS</h4>
+        <ul class="footer-col-links">
+          <li><a href="#servicos">Sites Institucionais</a></li>
+          <li><a href="#servicos">Landing Pages</a></li>
+          <li><a href="#servicos">Sistemas</a></li>
+          <li><a href="#servicos">SEO</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer-col-title">LEGAL</h4>
+        <ul class="footer-col-links">
+          <li><a href="/privacidade.html">Política de Privacidade</a></li>
+          <li><a href="/termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Klave Co. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="/privacidade.html">Política de Privacidade</a>
+        <a href="/termos.html">Termos de Uso</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-fab" href="https://wa.me/5527998417420?text=Ol%C3%A1%2C+quero+falar+com+um+funcion%C3%A1rio+da+Klave+Co." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    Falar com um funcionário
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

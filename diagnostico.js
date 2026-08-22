@@ -32,5 +32,5 @@ function finish(){
  stage.innerHTML='<div class="success-state"><p class="question-kicker">Diagnóstico concluído.</p><h2>Obrigado, '+escapeHtml((answers.nome||"").split(" ")[0])+'.</h2><p>Suas respostas estão prontas. Clique abaixo para enviá-las com segurança à nossa equipe.</p><button class="continue-button" id="sendLead" type="button">ENVIAR RESPOSTAS</button></div>';
  document.getElementById("sendLead").addEventListener("click",()=>form.submit())
 }
-backButton.addEventListener("click",()=>{if(current===0){location.href="index.html"}else{current--;render()}});
-if(new URLSearchParams(location.search).get("enviado")==="1"){proof.hidden=true;stage.innerHTML='<div class="success-state"><p class="question-kicker">Tudo certo.</p><h2>Recebemos seu diagnóstico.</h2><p>Nossa equipe entrará em contato em até 24 horas úteis.</p><a class="success-link" href="index.html">VOLTAR PARA A KLAVE</a></div>';progressBar.style.width="100%";stepNumber.textContent="06"}else render();
+backButton.addEventListener("click",()=>{if(current===0){location.href="institucional.html"}else{current--;render()}});
+if(new URLSearchParams(location.search).get("enviado")==="1"){proof.hidden=true;stage.innerHTML='<div class="success-state"><p class="question-kicker">Tudo certo.</p><h2>Recebemos seu diagnóstico.</h2><p>Nossa equipe entrará em contato em até 24 horas úteis.</p><a class="success-link" href="institucional.html">VOLTAR PARA A KLAVE</a></div>';progressBar.style.width="100%";stepNumber.textContent="06"}else render();
